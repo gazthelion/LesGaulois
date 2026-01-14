@@ -12,9 +12,12 @@ public class Gaulois {
 	}
 	
 	//c.un getteur sur le nom
-	public String getNom() {
+	 protected String getNom() {
 		return nom;
 	}
 	
-	
+	public static void main(String[] args) {
+		 Gaulois asterix = new Gaulois("Astérix", 8);
+	        System.out.println(asterix.getNom());
+	}
 }

@@ -25,4 +25,9 @@ public class Gaulois {
 		System.out.println("le gaulois " + nom + " : « " + texte + " ».");
 		
 	}
+	public void frapper(Romain aFrapper) {
+		System.out.println("le gaulois " + nom + " envoie un grand coup dans la machoire de " + aFrapper.getNom());
+		aFrapper.recevoirCoup(this.force / 3 );
+		
+	}
 }

@@ -17,4 +17,16 @@ public class Romain {
 		System.out.println("le romain " + nom + " : « " + texte + " ».");
 	}
 	
+	//création de la méthode recevoirCoup
+	public void recevoirCoup(int forceCoup) {
+			force = force - forceCoup;
+			if(force < 0 || force == 0){
+				force = 0;
+				System.out.println("le romain " + nom + " : « J'abandonne...».");
+				}
+			else {
+				System.out.println("le romain " + nom + " : « Aie !».");
+			}
+			
+	}
 }

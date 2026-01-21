@@ -30,7 +30,7 @@
 	    public void frapper(Personnage adversaire) {
 	        System.out.println(
 	            donnerAuteur() + " " + nom +
-	            " envoie un grand coup dans la mâchoire de " + adversaire.getNom()
+	            " donne un grand coup dans la mâchoire de " + adversaire.getNom()
 	        );
 	        adversaire.recevoirCoup(3);
 	    }

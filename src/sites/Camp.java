@@ -1,5 +1,6 @@
 package sites;
 import personnages.Soldat;
+import personnages.Grade;
 
 public class Camp {
 	
@@ -37,6 +38,17 @@ public class Camp {
 	        System.out.println("- " + soldats[i].getNom());
 	    }
 	}
+	
+	public void changerCommandant(Soldat nouveauCommandant) {
+	    if (nouveauCommandant.getGrade() == Grade.CENTURION) {
+	        Soldat ancienCommandant = this.commandant;
+	        this.commandant = nouveauCommandant;
+	        nouveauCommandant.parler("Moi " + nouveauCommandant.getNom() + " je prends la direction du camp romain.");
+	    } else {
+	        nouveauCommandant.parler("Je ne suis pas suffisamment gradé pour prendre la direction du camp romain.");
+	    }
+	}
+
 
 		
 		

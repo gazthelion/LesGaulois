@@ -28,9 +28,33 @@ public class Village {
 	        nombreVillageois++;
 	        chef.parler("Bienvenue " + gaulois.getNom() + " !");
 	    } else {
-	        chef.parler("Désolé " + gaulois.getNom() + " mon village est déjà bien rempli.");
+	        gaulois.parler("Désolé " + gaulois.getNom() + " mon village est déjà bien rempli.");
 	    }
 	}
 
+	//Méthode afficher villageois
+	public void afficherVillageois() {
+	    System.out.println("Le village dirigé par " + chef.getNom() + " est habité par :");
 
+	    for (int i = 0; i < nombreVillageois; i++) {
+	        System.out.println("- " + villageois[i].getNom());
+	    }
+	}
+	
+	public void changerChef(Gaulois nouveauChef) {
+	    if (nouveauChef != null) {
+	        // Ancien chef devient villageois
+	        Gaulois ancienChef = this.chef;
+	        this.chef = nouveauChef;
+
+	        // Message
+	        ancienChef.parler("Je laisse mon grand bouclier au grand " + nouveauChef.getNom());
+	        nouveauChef.parler("Merci !");
+
+	        // On peut réintégrer l'ancien chef comme villageois
+	        ajouterVillageois(ancienChef);
+	    }
+	}
+
+	
 }

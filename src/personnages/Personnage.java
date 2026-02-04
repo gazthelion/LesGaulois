@@ -48,6 +48,12 @@
 	            parler("J'abandonne...");
 	        }
 	    }
+	    
+	 // Dans Personnage.java
+	    public boolean estVivant() {
+	        return getForce() > 0;
+	    }
+
 	}
 
 
